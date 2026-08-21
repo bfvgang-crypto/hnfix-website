@@ -14,36 +14,42 @@ const services = [
   {
     icon: "🧼",
     title: "Reinigung",
+    image: "/placeholders/reinigung.jpg",
     description:
       "Gründliche Innen- und Objektreinigung für Wohnungen, Häuser und Gewerbeflächen.",
   },
   {
     icon: "🏢",
     title: "Treppenhaus",
+    image: "/placeholders/treppenhaus.jpg",
     description:
       "Regelmäßige oder einmalige Treppenhausreinigung für Eigentümer und Hausverwaltungen.",
   },
   {
     icon: "🧰",
     title: "Keller & Garage",
+    image: "/placeholders/keller-garage.jpg",
     description:
       "Freiräumen, reinigen und strukturieren von Nebenflächen für mehr nutzbaren Raum.",
   },
   {
     icon: "📦",
     title: "Entrümpelung",
+    image: "/placeholders/entruempelung.jpg",
     description:
       "Effiziente Räumungen mit klarer Planung, sauberer Durchführung und Entlastung vor Ort.",
   },
   {
     icon: "🚛",
     title: "Sperrmüll",
+    image: "/placeholders/sperrmuell.jpg",
     description:
       "Demontage, Transport und fachgerechte Bereitstellung für die sichere Entsorgung.",
   },
   {
     icon: "🌿",
     title: "Außenbereich",
+    image: "/placeholders/aussenbereich.jpg",
     description:
       "Saubere Zufahrten, Höfe und Eingangsbereiche für einen gepflegten Gesamteindruck.",
   },
@@ -133,9 +139,13 @@ export default function Home() {
           <div className="servicesGrid">
             {services.map((service) => (
               <article key={service.title} className="serviceCard">
-                <span className="serviceIcon" aria-hidden>
-                  {service.icon}
-                </span>
+                <div
+                  className="serviceMedia"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                  aria-hidden
+                >
+                  <span className="serviceIcon">{service.icon}</span>
+                </div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
               </article>
