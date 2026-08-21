@@ -39,7 +39,7 @@ a {
   left: 0;
   width: 100%;
   z-index: 50;
-  background: rgba(4, 12, 31, 0.8);
+  background: rgba(4, 12, 31, 0.82);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
 }
@@ -105,7 +105,7 @@ a {
       rgba(1, 7, 20, 0.5) 52%,
       rgba(2, 12, 34, 0.58) 100%
     ),
-    url("/placeholders/hero-hnfix.jpg");
+    url("/placeholders/hero-hnfix.svg");
   background-size: cover;
   background-position: center right;
 }
@@ -131,12 +131,13 @@ a {
   color: #61a7ff;
 }
 
-.hero h1 {
+.hero h1,
+.pageHero h1 {
   margin: 1rem 0 1.2rem;
-  font-size: clamp(2.3rem, 6vw, 5rem);
-  line-height: 0.98;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: 1;
   letter-spacing: -0.03em;
-  max-width: 12ch;
+  max-width: 13ch;
   text-wrap: balance;
 }
 
@@ -189,15 +190,19 @@ a {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.section {
-  padding: 5rem 0;
+.pageHero {
+  padding: 9.5rem 0 3rem;
 }
 
-#leistungen.section {
-  position: relative;
-  margin-top: -5.8rem;
-  z-index: 2;
+.section {
+  padding: 4.5rem 0;
+}
+
+.sectionTopTight {
   padding-top: 0;
+  margin-top: -5.8rem;
+  position: relative;
+  z-index: 2;
 }
 
 .section h2 {
@@ -269,9 +274,16 @@ a {
 }
 
 .serviceCard p {
-  margin: 0.7rem 1.2rem 1.3rem;
+  margin: 0.7rem 1.2rem 0.8rem;
   color: #d9e7ff;
   line-height: 1.6;
+}
+
+.cardLink {
+  display: inline-flex;
+  margin: 0 1.2rem 1.3rem;
+  color: #8ab8ff;
+  font-weight: 700;
 }
 
 .benefitsBar {
@@ -297,24 +309,6 @@ a {
 
 .sectionAlt {
   background: rgba(9, 24, 56, 0.72);
-}
-
-.contentGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem;
-}
-
-.contentGrid article {
-  background: rgba(11, 27, 61, 0.85);
-  border: 1px solid rgba(97, 167, 255, 0.18);
-  border-radius: 18px;
-  padding: 1.5rem;
-}
-
-.contentGrid p {
-  color: #d5e5ff;
-  line-height: 1.7;
 }
 
 .stepsGrid {
@@ -345,6 +339,36 @@ a {
 .stepCard h3 {
   margin: 0.85rem 0 0;
   font-size: 1.02rem;
+}
+
+.contentPanel {
+  background: rgba(8, 20, 45, 0.9);
+  border: 1px solid rgba(97, 167, 255, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 1.4rem;
+  display: grid;
+  gap: 0.65rem;
+  color: #d9e7ff;
+}
+
+.locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.locations span {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(10, 27, 61, 0.95);
 }
 
 .contactLayout {
@@ -399,6 +423,20 @@ a {
   cursor: pointer;
 }
 
+.siteFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footerInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: #c6d7f5;
+}
+
 @media (max-width: 1100px) {
   .mainNav {
     display: none;
@@ -418,9 +456,16 @@ a {
   .servicesGrid,
   .stepsGrid,
   .benefitsGrid,
-  .contentGrid,
   .contactLayout {
     grid-template-columns: 1fr;
+  }
+
+  .pageHero {
+    padding-top: 7.5rem;
+  }
+
+  .sectionTopTight {
+    margin-top: -3.2rem;
   }
 
   .benefitsGrid {
@@ -430,10 +475,6 @@ a {
   .hero {
     background-position: 62% center;
     padding-bottom: 5.2rem;
-  }
-
-  #leistungen.section {
-    margin-top: -3.2rem;
   }
 
   .hero h1 {
