@@ -1,436 +1,299 @@
 import Image from "next/image";
 
+const navigation = [
+  { label: "Startseite", href: "#startseite" },
+  { label: "Leistungen", href: "#leistungen" },
+  { label: "Entrümpelung", href: "#entruempelung" },
+  { label: "Hausservice", href: "#hausservice" },
+  { label: "Für Vermieter", href: "#vermieter" },
+  { label: "Einsatzgebiet", href: "#einsatzgebiet" },
+  { label: "Kontakt", href: "#kontakt" },
+];
+
 const services = [
   {
-    title: "Haus- & Wohnungsreinigung",
-    text: "Gründliche Reinigung für Wohnungen und Häuser.",
+    icon: "🧼",
+    title: "Reinigung",
+    description:
+      "Gründliche Innen- und Objektreinigung für Wohnungen, Häuser und Gewerbeflächen.",
   },
   {
-    title: "Treppenhausreinigung",
-    text: "Saubere Treppenhäuser für Eigentümer und Hausverwaltungen.",
+    icon: "🏢",
+    title: "Treppenhaus",
+    description:
+      "Regelmäßige oder einmalige Treppenhausreinigung für Eigentümer und Hausverwaltungen.",
   },
   {
+    icon: "🧰",
     title: "Keller & Garage",
-    text: "Aufräumen, reinigen und freimachen von Nebenräumen.",
+    description:
+      "Freiräumen, reinigen und strukturieren von Nebenflächen für mehr nutzbaren Raum.",
   },
   {
+    icon: "📦",
     title: "Entrümpelung",
-    text: "Wir räumen Wohnungen, Keller und Garagen zuverlässig.",
+    description:
+      "Effiziente Räumungen mit klarer Planung, sauberer Durchführung und Entlastung vor Ort.",
   },
   {
-    title: "Sperrmüllbereitstellung",
-    text: "Möbel abbauen und für die Abholung vorbereiten.",
+    icon: "🚛",
+    title: "Sperrmüll",
+    description:
+      "Demontage, Transport und fachgerechte Bereitstellung für die sichere Entsorgung.",
   },
   {
-    title: "Hof & Außenreinigung",
-    text: "Saubere Außenbereiche rund um Ihre Immobilie.",
-  },
-  {
-    title: "Gartenpflege",
-    text: "Pflegearbeiten rund um Haus und Grundstück.",
+    icon: "🌿",
+    title: "Außenbereich",
+    description:
+      "Saubere Zufahrten, Höfe und Eingangsbereiche für einen gepflegten Gesamteindruck.",
   },
 ];
 
-const locations = [
-  "Heilbronn",
-  "Neckarsulm",
-  "Weinsberg",
-  "Leingarten",
-  "Bad Friedrichshall",
-  "Neuenstadt",
-  "Lauffen",
-  "Abstatt",
+const heroBenefits = [
+  "Kostenlose Anfrage",
+  "Schnelle Termine",
+  "Zuverlässiger Service",
+  "Fachgerechte Entsorgung",
+];
+
+const qualityBenefits = [
+  "Festpreis Garantie",
+  "Schnelle Termine",
+  "Fachgerechte Entsorgung",
+  "Persönlicher Service",
+];
+
+const processSteps = [
+  "Anfrage stellen",
+  "Fotos & Details senden",
+  "Angebot erhalten",
+  "Termin vereinbaren",
 ];
 
 export default function Home() {
   return (
-    <main>
-
+    <main className="page">
       <header className="siteHeader">
-        <a href="#start" className="brand">
-          <Image
-            src="/logo.png"
-            alt="HNFix Haus & Objekt Service"
-            width={220}
-            height={120}
-            priority
-          />
-        </a>
-
-        <nav>
-          <a href="#start">Startseite</a>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#ablauf">Ablauf</a>
-          <a href="#gebiet">Einsatzgebiet</a>
-          <a href="#ueber-uns">Über uns</a>
-          <a href="#kontakt" className="navCta">
-            Angebot
+        <div className="container headerInner">
+          <a href="#startseite" className="brand" aria-label="Zur Startseite">
+            <Image
+              src="/logo.png"
+              alt="HNFix Haus & Objekt Service Heilbronn"
+              width={170}
+              height={68}
+              priority
+            />
           </a>
-        </nav>
+
+          <nav className="mainNav" aria-label="Hauptnavigation">
+            {navigation.map((item) => (
+              <a key={item.label} href={item.href}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <a href="#kontakt" className="headerCta">
+            Kostenloses Angebot
+          </a>
+        </div>
       </header>
 
-
-      <section id="start" className="hero">
-
-        <div className="heroInner">
-
-          <p className="eyebrow">
-            Heilbronn & Umgebung
+      <section id="startseite" className="hero">
+        <div className="heroOverlay" />
+        <div className="container heroInner">
+          <p className="heroEyebrow">Heilbronn & Umgebung – bis 50 km</p>
+          <h1>Haus & Objekt Service Heilbronn</h1>
+          <p className="heroSubtitle">
+            Reinigung · Entrümpelung · Keller · Garage · Treppenhaus ·
+            Außenbereich
           </p>
 
-          <h1>
-            Haus & Objekt Service
-          </h1>
+          <ul className="heroBenefits">
+            {heroBenefits.map((item) => (
+              <li key={item}>✓ {item}</li>
+            ))}
+          </ul>
 
-          <h2>
-            Reinigung · Entrümpelung · Hausservice
-          </h2>
-
-          <p className="lead">
-            Zuverlässige Hilfe rund um Ihre Immobilie.
-            Von Reinigung über Keller und Garage bis zur
-            Entrümpelung.
-          </p>
-
-
-          <div className="heroPoints">
-            <span>✓ Schnell</span>
-            <span>✓ Zuverlässig</span>
-            <span>✓ Kostenlose Anfrage</span>
-          </div>
-
-
-          <div className="actions">
-
-            <a
-              href="#kontakt"
-              className="primary"
-            >
-              Kostenloses Angebot
+          <div className="heroActions">
+            <a href="#kontakt" className="btn btnPrimary">
+              Kostenloses Angebot anfordern
             </a>
-
-            <a
-              href="#leistungen"
-              className="secondary"
-            >
-              Leistungen
+            <a href="#leistungen" className="btn btnGhost">
+              Unsere Leistungen
             </a>
-
           </div>
-
         </div>
-
       </section>
 
+      <section id="leistungen" className="section">
+        <div className="container">
+          <p className="sectionEyebrow">Leistungen</p>
+          <h2>Professioneller Service rund um Haus und Objekt</h2>
+          <div className="servicesGrid">
+            {services.map((service) => (
+              <article key={service.title} className="serviceCard">
+                <span className="serviceIcon" aria-hidden>
+                  {service.icon}
+                </span>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <section
-        id="leistungen"
-        className="section"
-      >
-
-        <p className="eyebrow">
-          Unsere Leistungen
-        </p>
-
-        <h2>
-          Alles aus einer Hand
-        </h2>
-
-
-        <div className="grid">
-
-          {services.map((service) => (
-
-            <article
-              key={service.title}
-              className="card"
-            >
-
-              <h3>
-                {service.title}
-              </h3>
-
-              <p>
-                {service.text}
-              </p>
-
-            </article>
-
+      <section className="benefitsBar" aria-label="Ihre Vorteile">
+        <div className="container benefitsGrid">
+          {qualityBenefits.map((item) => (
+            <p key={item}>{item}</p>
           ))}
-
         </div>
-
-      </section>      <section
-        id="ablauf"
-        className="section alt"
-      >
-
-        <p className="eyebrow">
-          So funktioniert&apos;s
-        </p>
-
-        <h2>
-          Einfach und schnell zum Angebot
-        </h2>
-
-
-        <div className="steps">
-
-          <div>
-            <strong>1</strong>
-            <span>
-              Anfrage senden
-            </span>
-          </div>
-
-          <div>
-            <strong>2</strong>
-            <span>
-              Fotos & Details schicken
-            </span>
-          </div>
-
-          <div>
-            <strong>3</strong>
-            <span>
-              Angebot erhalten
-            </span>
-          </div>
-
-          <div>
-            <strong>4</strong>
-            <span>
-              Termin vereinbaren
-            </span>
-          </div>
-
-        </div>
-
       </section>
 
-
-
-      <section
-        id="gebiet"
-        className="section"
-      >
-
-        <p className="eyebrow">
-          Einsatzgebiet
-        </p>
-
-        <h2>
-          Heilbronn und Umgebung
-        </h2>
-
-        <p className="areaText">
-          Wir helfen Kunden in Heilbronn und
-          vielen Orten im Umkreis von ca. 50 km.
-        </p>
-
-
-        <div className="locations">
-
-          {locations.map((location) => (
-            <span key={location}>
-              {location}
-            </span>
-          ))}
-
-        </div>
-
-      </section>
-
-
-
-      <section
-        id="ueber-uns"
-        className="businessSection"
-      >
-
-        <div className="businessInner">
-
-          <div>
-
-            <p className="eyebrow">
-              Über HNFix
-            </p>
-
-            <h2>
-              Ihr zuverlässiger Partner rund ums Haus
-            </h2>
-
-          </div>
-
-
-          <div className="businessText">
-
+      <section id="entruempelung" className="section sectionAlt">
+        <div className="container contentGrid">
+          <article>
+            <p className="sectionEyebrow">Entrümpelung</p>
+            <h2>Strukturiert, sauber und terminsicher umgesetzt</h2>
             <p>
-              HNFix unterstützt Privatkunden,
-              Eigentümer und Hausverwaltungen
-              bei Reinigung, Entrümpelung und
-              praktischen Arbeiten rund um Immobilien.
+              Von einzelnen Räumen bis zu kompletten Objekten: Wir übernehmen
+              die Entrümpelung zuverlässig und hinterlassen die Fläche besenrein
+              zur weiteren Nutzung.
             </p>
+          </article>
 
-
+          <article id="hausservice">
+            <p className="sectionEyebrow">Hausservice</p>
+            <h2>Regelmäßige Betreuung für Immobilien</h2>
             <p>
-              Unser Ziel: saubere Lösungen,
-              schnelle Hilfe und zuverlässiger Service.
+              HNFix unterstützt bei Reinigung, Außenpflege und laufenden
+              Arbeiten rund ums Objekt – flexibel für private und gewerbliche
+              Anforderungen.
             </p>
-
-          </div>
-
+          </article>
         </div>
-
       </section>
 
-
-
-
-      <section
-        id="kontakt"
-        className="section contact"
-      >
-
-        <div>
-
-          <p className="eyebrow">
-            Kostenlose Anfrage
+      <section id="vermieter" className="section">
+        <div className="container">
+          <p className="sectionEyebrow">Für Vermieter</p>
+          <h2>Verlässliche Unterstützung bei Mieterwechsel und Objektpflege</h2>
+          <p className="sectionLead">
+            Schnelle Termine, klare Abstimmung und professionelle Ausführung für
+            ein sauberes Erscheinungsbild Ihrer Immobilie.
           </p>
-
-
-          <h2>
-            Was können wir für Sie erledigen?
-          </h2>
-
-
-          <p>
-            Senden Sie uns Ihre Anfrage.
-            Wir melden uns schnellstmöglich.
-          </p>
-
         </div>
+      </section>
 
+      <section className="section sectionAlt" id="ablauf">
+        <div className="container">
+          <p className="sectionEyebrow">So einfach geht&apos;s</p>
+          <h2>In 4 Schritten zum passenden Service</h2>
+          <div className="stepsGrid">
+            {processSteps.map((step, index) => (
+              <article key={step} className="stepCard">
+                <span>{index + 1}</span>
+                <h3>{step}</h3>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      <section id="einsatzgebiet" className="section">
+        <div className="container">
+          <p className="sectionEyebrow">Einsatzgebiet</p>
+          <h2>Heilbronn und Umgebung bis 50 km</h2>
+          <p className="sectionLead">
+            Wir sind in Heilbronn und im regionalen Umkreis schnell für Sie im
+            Einsatz – mit persönlichem Service und kurzen Reaktionszeiten.
+          </p>
+        </div>
+      </section>
 
-        <form className="form">
+      <section id="kontakt" className="section">
+        <div className="container contactLayout">
+          <div>
+            <p className="sectionEyebrow">Kontakt</p>
+            <h2>Kostenloses Angebot für Ihr Anliegen anfragen</h2>
+            <p className="sectionLead">
+              Senden Sie uns Ihre Daten und eine kurze Beschreibung. Wir melden
+              uns zeitnah mit einem passenden Angebot.
+            </p>
+          </div>
 
+          <form className="contactForm">
+            <label htmlFor="name">
+              Name
+              <input id="name" name="name" type="text" placeholder="Ihr Name" />
+            </label>
 
-          <label>
-            Name
+            <label htmlFor="telefon">
+              Telefon
+              <input
+                id="telefon"
+                name="telefon"
+                type="tel"
+                placeholder="Ihre Telefonnummer"
+              />
+            </label>
 
-            <input
-              placeholder="Ihr Name"
-            />
+            <label htmlFor="email">
+              E-Mail
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="ihre@email.de"
+              />
+            </label>
 
-          </label>
+            <label htmlFor="ort">
+              PLZ / Ort
+              <input id="ort" name="ort" type="text" placeholder="74072 Heilbronn" />
+            </label>
 
-
-
-          <label>
-            Telefon oder E-Mail
-
-            <input
-              placeholder="Ihre Kontaktdaten"
-            />
-
-          </label>
-
-
-
-          <label>
-            PLZ / Ort
-
-            <input
-              placeholder="74072 Heilbronn"
-            />
-
-          </label>
-
-
-
-          <label>
-            Leistung
-
-            <select defaultValue="">
-
-              <option value="" disabled>
-                Bitte auswählen
-              </option>
-
-
-              {services.map((service) => (
-
-                <option key={service.title}>
-                  {service.title}
+            <label htmlFor="service">
+              Service auswählen
+              <select id="service" name="service" defaultValue="">
+                <option value="" disabled>
+                  Bitte auswählen
                 </option>
+                {services.map((service) => (
+                  <option key={service.title} value={service.title}>
+                    {service.title}
+                  </option>
+                ))}
+              </select>
+            </label>
 
-              ))}
+            <label htmlFor="beschreibung">
+              Beschreibung
+              <textarea
+                id="beschreibung"
+                name="beschreibung"
+                rows={5}
+                placeholder="Was soll erledigt werden?"
+              />
+            </label>
 
+            <label htmlFor="upload">
+              Upload photos placeholder
+              <input
+                id="upload"
+                name="upload"
+                type="text"
+                placeholder="Foto-Upload wird hier integriert"
+                readOnly
+              />
+            </label>
 
-            </select>
-
-          </label>
-
-
-
-          <label>
-            Beschreibung
-
-            <textarea
-              rows={5}
-              placeholder="Was soll gemacht werden?"
-            />
-
-          </label>
-
-
-
-          <button type="button">
-            Anfrage senden
-          </button>
-
-
-        </form>
-
-
+            <button type="submit">Anfrage senden</button>
+          </form>
+        </div>
       </section>
-
-
-
-
-      <section className="finalCta">
-
-        <h2>
-          Bereit für ein kostenloses Angebot?
-        </h2>
-
-
-        <a href="#kontakt">
-          Jetzt Anfrage senden
-        </a>
-
-
-      </section>
-
-
-
-
-      <footer>
-
-        <strong>
-          HNFix
-        </strong>
-
-
-        <span>
-          Haus & Objekt Service · Heilbronn
-        </span>
-
-
-      </footer>
-
-
     </main>
   );
 }
