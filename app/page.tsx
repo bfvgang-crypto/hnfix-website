@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
   {
     title: "Haus- & Wohnungsreinigung",
@@ -43,11 +45,13 @@ export default function Home() {
     <main>
       <header className="siteHeader">
         <a className="brand" href="#">
-          <span className="brandMark">HN</span>
-          <span>
-            <strong>HNFix</strong>
-            <small>Haus & Objekt Service</small>
-          </span>
+          <Image
+            src="/logo.png"
+            alt="HNFix Haus & Objekt Service"
+            width={220}
+            height={120}
+            priority
+          />
         </a>
 
         <nav>
@@ -134,7 +138,9 @@ export default function Home() {
               Zusammenarbeit interessiert.
             </p>
 
-            <a href="#anfrage">Unverbindlich Kontakt aufnehmen →</a>
+            <a href="#anfrage">
+              Unverbindlich Kontakt aufnehmen →
+            </a>
           </div>
         </div>
       </section>
@@ -146,51 +152,29 @@ export default function Home() {
         </div>
 
         <div className="steps">
-          <div>
-            <strong>1</strong>
-            <span>
-              <b>Anfrage senden</b>
-              <small>Service auswählen und kurz beschreiben.</small>
-            </span>
-          </div>
-
-          <div>
-            <strong>2</strong>
-            <span>
-              <b>Fotos & Details</b>
-              <small>Bei Bedarf Bilder und weitere Informationen senden.</small>
-            </span>
-          </div>
-
-          <div>
-            <strong>3</strong>
-            <span>
-              <b>Angebot erhalten</b>
-              <small>Sie erhalten ein unverbindliches Angebot.</small>
-            </span>
-          </div>
-
-          <div>
-            <strong>4</strong>
-            <span>
-              <b>Termin vereinbaren</b>
-              <small>Passenden Termin auswählen und Auftrag erledigen.</small>
-            </span>
-          </div>
+          {[
+            "Anfrage senden",
+            "Fotos & Details schicken",
+            "Angebot erhalten",
+            "Termin vereinbaren",
+          ].map((step, index) => (
+            <div key={step}>
+              <strong>{index + 1}</strong>
+              <span>{step}</span>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section id="gebiet" className="section areaSection">
-        <div>
-          <p className="eyebrow">Einsatzgebiet</p>
-          <h2>Heilbronn + ca. 50 km</h2>
+      <section id="gebiet" className="section">
+        <p className="eyebrow">Einsatzgebiet</p>
 
-          <p className="areaText">
-            Wir sind in Heilbronn und vielen Orten der Umgebung verfügbar.
-            Fragen Sie einfach an – wir prüfen kurzfristig, ob wir Ihren Ort
-            bedienen können.
-          </p>
-        </div>
+        <h2>Heilbronn + ca. 50 km</h2>
+
+        <p className="areaText">
+          Heilbronn, Neckarsulm, Weinsberg, Leingarten,
+          Bad Friedrichshall und weitere Orte in der Umgebung.
+        </p>
 
         <div className="locations">
           <span>Heilbronn</span>
@@ -199,54 +183,41 @@ export default function Home() {
           <span>Leingarten</span>
           <span>Bad Friedrichshall</span>
           <span>Neuenstadt</span>
-          <span>Lauffen am Neckar</span>
+          <span>Lauffen</span>
           <span>Abstatt</span>
         </div>
       </section>
 
       <section id="anfrage" className="section contact">
-        <div className="contactIntro">
+        <div>
           <p className="eyebrow">Kostenlose Anfrage</p>
 
           <h2>Was können wir für Sie erledigen?</h2>
 
           <p>
-            Beschreiben Sie kurz, was gemacht werden soll. Je genauer die
-            Angaben, desto besser können wir Ihre Anfrage einschätzen.
+            Beschreiben Sie kurz Ihre Aufgabe. Wir melden uns schnellstmöglich.
           </p>
-
-          <div className="contactBenefits">
-            <span>✓ Unverbindliche Anfrage</span>
-            <span>✓ Keine versteckten Kosten</span>
-            <span>✓ Schnelle Rückmeldung</span>
-          </div>
         </div>
 
         <form className="form">
           <label>
             Name
-            <input name="name" placeholder="Ihr Name" />
+            <input placeholder="Ihr Name" />
           </label>
 
           <label>
             Telefon oder E-Mail
-            <input
-              name="contact"
-              placeholder="Telefonnummer oder E-Mail-Adresse"
-            />
+            <input placeholder="Ihre Kontaktdaten" />
           </label>
 
           <label>
             PLZ / Ort
-            <input
-              name="location"
-              placeholder="z. B. 74072 Heilbronn"
-            />
+            <input placeholder="74072 Heilbronn" />
           </label>
 
           <label>
-            Gewünschte Leistung
-            <select name="service" defaultValue="">
+            Leistung
+            <select defaultValue="">
               <option value="" disabled>
                 Bitte auswählen
               </option>
@@ -260,48 +231,20 @@ export default function Home() {
           <label>
             Beschreibung
             <textarea
-              name="message"
-              rows={6}
-              placeholder="Was soll gemacht werden? Zum Beispiel: Keller entrümpeln, Möbel nach draußen tragen, Treppenhaus reinigen ..."
+              rows={5}
+              placeholder="Was soll gemacht werden?"
             />
           </label>
 
-          <label>
-            Wunschtermin
-            <input name="date" type="date" />
-          </label>
-
-          <button type="button">Kostenlose Anfrage senden</button>
-
-          <small>
-            Ihre Angaben werden ausschließlich zur Bearbeitung Ihrer Anfrage
-            verwendet.
-          </small>
+          <button type="button">
+            Kostenlose Anfrage senden
+          </button>
         </form>
       </section>
 
-      <section className="finalCta">
-        <div>
-          <p className="eyebrow">HNFix Heilbronn</p>
-          <h2>Sie haben Arbeit rund ums Haus?</h2>
-          <p>Schicken Sie uns Ihre Anfrage. Wir prüfen, wie wir helfen können.</p>
-        </div>
-
-        <a href="#anfrage">Jetzt kostenlos anfragen</a>
-      </section>
-
       <footer>
-        <div>
-          <strong>HNFix</strong>
-          <span>Haus & Objekt Service · Heilbronn</span>
-        </div>
-
-        <div className="footerLinks">
-          <a href="#leistungen">Leistungen</a>
-          <a href="#anfrage">Kontakt</a>
-          <span>Impressum</span>
-          <span>Datenschutz</span>
-        </div>
+        <strong>HNFix</strong>
+        <span>Haus & Objekt Service · Heilbronn</span>
       </footer>
     </main>
   );
