@@ -50,7 +50,7 @@ export const services = [
 export const qualityBenefits = [
   {
     icon: "shield-check",
-    title: "Festpreis Garantie",
+    title: "Festpreisgarantie",
     description: "Transparente Preise ohne versteckte Kosten.",
   },
   {

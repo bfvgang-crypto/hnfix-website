@@ -75,7 +75,7 @@ export function SiteHeader() {
       <nav
         id="mobile-navigation"
         className={`mobileNav${menuOpen ? " isOpen" : ""}`}
-        aria-label="Mobile Navigation"
+        aria-label="Navigation für Mobilgeräte"
         aria-hidden={!menuOpen}
       >
         <div className="mobileNavInner">

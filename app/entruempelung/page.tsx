@@ -11,7 +11,7 @@ export const metadata: Metadata = createPageMetadata(
 
 const points = [
   "Wohnungen, Häuser, Keller und Garagen",
-  "Demontage, Transport und Besenreine Übergabe",
+  "Demontage, Transport und besenreine Übergabe",
   "Fachgerechte Entsorgung nach Absprache",
   "Planbare Termine auch bei kurzfristigem Bedarf",
 ];

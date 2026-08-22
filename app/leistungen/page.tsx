@@ -16,7 +16,7 @@ export default function LeistungenPage() {
       <section className="pageHero">
         <div className="container">
           <p className="sectionEyebrow">Leistungen</p>
-          <h1>Alle Services für saubere und gepflegte Immobilien</h1>
+          <h1>Alle Leistungen für saubere und gepflegte Immobilien</h1>
           <p className="sectionLead">
             Von Reinigung bis Entrümpelung bietet HNFix einen zuverlässigen
             Rundum-Service in Heilbronn und Umgebung.
