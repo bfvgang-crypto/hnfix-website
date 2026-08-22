@@ -55,22 +55,22 @@ export const services = [
 
 export const qualityBenefits = [
   {
-    icon: "◇",
+    icon: "shield-check",
     title: "Festpreis Garantie",
     description: "Transparente Preise ohne versteckte Kosten.",
   },
   {
-    icon: "◷",
+    icon: "clock",
     title: "Schnelle Termine",
     description: "Kurzfristige Termine möglich – wir sind für Sie da.",
   },
   {
-    icon: "♻",
+    icon: "recycle",
     title: "Fachgerechte Entsorgung",
     description: "Umweltgerecht, zuverlässig und sauber.",
   },
   {
-    icon: "♙",
+    icon: "user",
     title: "Persönlicher Service",
     description: "Direkter Kontakt und individuelle Lösungen.",
   },
