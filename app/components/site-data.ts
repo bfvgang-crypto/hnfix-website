@@ -14,48 +14,42 @@ export const services = [
     title: "Reinigung",
     image: "/placeholders/reinigung.png",
     href: "/reinigung",
-    description:
-      "Gründliche Innen- und Objektreinigung für Wohnungen, Häuser und Gewerbeflächen.",
+    description: "Sauberkeit, auf die Sie sich verlassen können.",
   },
   {
     icon: "🏢",
     title: "Treppenhaus",
     image: "/placeholders/TREPPENHAUS.png",
     href: "/hausservice",
-    description:
-      "Regelmäßige oder einmalige Treppenhausreinigung für Eigentümer und Hausverwaltungen.",
+    description: "Gepflegte Treppenhäuser für ein positives Bild.",
   },
   {
     icon: "🧰",
     title: "Keller & Garage",
     image: "/placeholders/KELLER & GARAGE.png",
     href: "/hausservice",
-    description:
-      "Freiräumen, reinigen und strukturieren von Nebenflächen für mehr nutzbaren Raum.",
+    description: "Wir räumen und reinigen Ihre Nebenräume.",
   },
   {
     icon: "📦",
     title: "Entrümpelung",
     image: "/placeholders/ENTRÜMPELUNG.png",
     href: "/entruempelung",
-    description:
-      "Effiziente Räumungen mit klarer Planung, sauberer Durchführung und Entlastung vor Ort.",
+    description: "Schnell, zuverlässig und besenrein.",
   },
   {
     icon: "🚛",
     title: "Sperrmüll",
     image: "/placeholders/SPERRMÜLL.png",
     href: "/entruempelung",
-    description:
-      "Demontage, Transport und fachgerechte Bereitstellung für die sichere Entsorgung.",
+    description: "Fachgerechte Vorbereitung zur Abholung.",
   },
   {
     icon: "🌿",
     title: "Außenbereich",
     image: "/placeholders/AUSSENBEREICH.png",
     href: "/hausservice",
-    description:
-      "Saubere Zufahrten, Höfe und Eingangsbereiche für einen gepflegten Gesamteindruck.",
+    description: "Hof, Garten & Außenflächen in besten Händen.",
   },
 ];
 

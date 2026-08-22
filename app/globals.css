@@ -296,8 +296,8 @@ a {
 }
 
 .homeServices .serviceCard {
-  height: 240px;
-  min-height: 240px;
+  height: 224px;
+  min-height: 224px;
   border-color: rgba(17, 134, 231, 0.55);
   border-radius: 6px;
   background: #020b17;
@@ -328,7 +328,7 @@ a {
 }
 
 .homeServices .serviceMedia {
-  height: 134px;
+  height: 122px;
   border-bottom: 0;
 }
 
