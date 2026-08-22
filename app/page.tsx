@@ -18,7 +18,11 @@ export default function Home() {
         <div className="heroOverlay" />
         <div className="container heroInner">
           <p className="heroEyebrow">Heilbronn & Umgebung – bis 50 km</p>
-          <h1>Haus & Objekt Service Heilbronn</h1>
+          <h1>
+            Haus & Objekt
+            <br />
+            Service Heilbronn
+          </h1>
           <p className="heroSubtitle">
             Reinigung · Entrümpelung · Keller · Garage · Treppenhaus ·
             Außenbereich
@@ -26,7 +30,7 @@ export default function Home() {
 
           <ul className="heroBenefits">
             {heroBenefits.map((item) => (
-              <li key={item}>✓ {item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
 
