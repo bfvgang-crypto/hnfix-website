@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../components/page-shell";
+import { createPageMetadata } from "../metadata";
+
+export const metadata: Metadata = createPageMetadata(
+  "Hausservice",
+  "Flexibler Hausservice für Treppenhäuser, Keller, Garagen und Außenflächen in Heilbronn und Umgebung.",
+  "/hausservice",
+);
 
 const services = [
   "Treppenhausreinigung",

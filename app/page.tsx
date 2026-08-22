@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import heroImage from "../public/hero.webp";
 import { BenefitsBar } from "./components/benefits-bar";
 import { PageShell } from "./components/page-shell";
 import { ProcessSteps } from "./components/process-steps";
 import { ServicesGrid } from "./components/services-grid";
+import { createPageMetadata } from "./metadata";
+
+export const metadata: Metadata = createPageMetadata(
+  "Haus & Objekt Service Heilbronn",
+  "HNFix bietet Reinigung, Entrümpelung und Hausservice mit Festpreisen in Heilbronn und bis zu 50 km Umgebung.",
+  "/",
+);
 
 const heroBenefits = [
   "Kostenlose Anfrage & Festpreis",
@@ -15,6 +25,14 @@ export default function Home() {
   return (
     <PageShell>
       <section className="hero">
+        <Image
+          className="heroImage"
+          src={heroImage}
+          alt="Gepflegte Immobilie im Einsatzgebiet von HNFix"
+          fill
+          priority
+          sizes="100vw"
+        />
         <div className="heroOverlay" />
         <div className="container heroInner">
           <p className="heroEyebrow">Heilbronn & Umgebung – bis 50 km</p>

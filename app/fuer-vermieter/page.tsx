@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../components/page-shell";
+import { createPageMetadata } from "../metadata";
+
+export const metadata: Metadata = createPageMetadata(
+  "Service für Vermieter",
+  "HNFix unterstützt Vermieter, Eigentümer und Hausverwaltungen bei Mieterwechsel, Reinigung und Entrümpelung.",
+  "/fuer-vermieter",
+);
 
 const advantages = [
   "Schnelle Einsatzbereitschaft bei Mieterwechsel",

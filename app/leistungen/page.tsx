@@ -2,6 +2,13 @@ import { BenefitsBar } from "../components/benefits-bar";
 import { PageShell } from "../components/page-shell";
 import { ProcessSteps } from "../components/process-steps";
 import { ServicesGrid } from "../components/services-grid";
+import { createPageMetadata } from "../metadata";
+
+export const metadata: Metadata = createPageMetadata(
+  "Leistungen",
+  "Entdecken Sie alle HNFix Leistungen: Reinigung, Entrümpelung, Hausservice und Objektpflege in Heilbronn und Umgebung.",
+  "/leistungen",
+);
 
 export default function LeistungenPage() {
   return (
@@ -28,3 +35,4 @@ export default function LeistungenPage() {
     </PageShell>
   );
 }
+import type { Metadata } from "next";

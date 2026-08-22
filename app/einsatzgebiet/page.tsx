@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { PageShell } from "../components/page-shell";
+import { createPageMetadata } from "../metadata";
+
+export const metadata: Metadata = createPageMetadata(
+  "Einsatzgebiet",
+  "HNFix ist in Heilbronn, Neckarsulm, Weinsberg und im Umkreis von bis zu 50 km für Sie im Einsatz.",
+  "/einsatzgebiet",
+);
 
 const locations = [
   "Heilbronn",

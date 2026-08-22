@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../components/page-shell";
+import { createPageMetadata } from "../metadata";
+
+export const metadata: Metadata = createPageMetadata(
+  "Entrümpelung",
+  "Zuverlässige Entrümpelung mit Transport, fachgerechter Entsorgung und besenreiner Übergabe in Heilbronn und Umgebung.",
+  "/entruempelung",
+);
 
 const points = [
   "Wohnungen, Häuser, Keller und Garagen",

@@ -79,7 +79,7 @@ export const processSteps = [
   {
     title: "Fotos & Details senden",
     description:
-      "Senden Sie uns Bilder und wichtige Informationen zum Objekt.",
+      "Nach unserer Antwort können Sie Bilder und weitere Details sicher per E-Mail senden.",
   },
   {
     title: "Kostenloses Angebot erhalten",
