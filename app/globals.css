@@ -303,6 +303,28 @@ a {
   background: #020b17;
   box-shadow: none;
   text-align: center;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.homeServices .serviceCard:hover,
+.homeServices .serviceCard:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(29, 151, 255, 0.9);
+  box-shadow: 0 12px 30px rgba(0, 107, 204, 0.24);
+}
+
+.serviceCardButton {
+  display: block;
+  height: 100%;
+  color: inherit;
+}
+
+.serviceCardButton:focus-visible {
+  outline: 2px solid #38a5ff;
+  outline-offset: -3px;
 }
 
 .homeServices .serviceMedia {
@@ -312,6 +334,11 @@ a {
 
 .homeServices .serviceMedia::after {
   background: linear-gradient(180deg, rgba(2, 8, 23, 0.06), #020b17 100%);
+}
+
+.serviceMedia img {
+  object-fit: cover;
+  object-position: center;
 }
 
 .homeServices .serviceIcon {
@@ -704,6 +731,7 @@ a {
   }
 
   .homeServices .serviceCard {
+    height: auto;
     min-height: 0;
   }
 

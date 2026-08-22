@@ -12,7 +12,7 @@ export const services = [
   {
     icon: "🧼",
     title: "Reinigung",
-    image: "/placeholders/reinigung.svg",
+    image: "/placeholders/reinigung.png",
     href: "/reinigung",
     description:
       "Gründliche Innen- und Objektreinigung für Wohnungen, Häuser und Gewerbeflächen.",
@@ -20,7 +20,7 @@ export const services = [
   {
     icon: "🏢",
     title: "Treppenhaus",
-    image: "/placeholders/treppenhaus.svg",
+    image: "/placeholders/TREPPENHAUS.png",
     href: "/hausservice",
     description:
       "Regelmäßige oder einmalige Treppenhausreinigung für Eigentümer und Hausverwaltungen.",
@@ -28,7 +28,7 @@ export const services = [
   {
     icon: "🧰",
     title: "Keller & Garage",
-    image: "/placeholders/keller-garage.svg",
+    image: "/placeholders/KELLER & GARAGE.png",
     href: "/hausservice",
     description:
       "Freiräumen, reinigen und strukturieren von Nebenflächen für mehr nutzbaren Raum.",
@@ -36,7 +36,7 @@ export const services = [
   {
     icon: "📦",
     title: "Entrümpelung",
-    image: "/placeholders/entruempelung.svg",
+    image: "/placeholders/ENTRÜMPELUNG.png",
     href: "/entruempelung",
     description:
       "Effiziente Räumungen mit klarer Planung, sauberer Durchführung und Entlastung vor Ort.",
@@ -44,7 +44,7 @@ export const services = [
   {
     icon: "🚛",
     title: "Sperrmüll",
-    image: "/placeholders/sperrmuell.svg",
+    image: "/placeholders/SPERRMÜLL.png",
     href: "/entruempelung",
     description:
       "Demontage, Transport und fachgerechte Bereitstellung für die sichere Entsorgung.",
@@ -52,7 +52,7 @@ export const services = [
   {
     icon: "🌿",
     title: "Außenbereich",
-    image: "/placeholders/aussenbereich.svg",
+    image: "/placeholders/AUSSENBEREICH.png",
     href: "/hausservice",
     description:
       "Saubere Zufahrten, Höfe und Eingangsbereiche für einen gepflegten Gesamteindruck.",
