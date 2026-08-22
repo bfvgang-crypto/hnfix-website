@@ -333,7 +333,11 @@ a {
 }
 
 .homeServices .serviceMedia::after {
-  background: linear-gradient(180deg, rgba(2, 8, 23, 0.06), #020b17 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 8, 23, 0.03),
+    rgba(2, 11, 23, 0.78) 100%
+  );
 }
 
 .homeServices .serviceMedia img {
