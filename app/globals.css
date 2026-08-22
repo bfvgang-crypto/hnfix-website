@@ -891,6 +891,14 @@ a {
   accent-color: #22c55e;
 }
 
+.consentField a,
+.legalContent a,
+.cookieConsent a {
+  color: #69b5ff;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .formMessage {
   margin: 0;
 }
@@ -949,6 +957,232 @@ a {
   gap: 1rem;
   flex-wrap: wrap;
   color: #c6d7f5;
+}
+
+.footerBrand {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.footerLinks a,
+.footerLinkButton {
+  color: #d7e6ff;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.footerLinks a:hover,
+.footerLinks a:focus-visible,
+.footerLinkButton:hover,
+.footerLinkButton:focus-visible {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.footerLinkButton {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.legalHero {
+  padding-bottom: 2.2rem;
+}
+
+.legalSection {
+  padding-top: 1rem;
+}
+
+.legalContent {
+  width: min(100%, 900px);
+  display: grid;
+  gap: 2rem;
+}
+
+.legalContent section {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.legalContent h2,
+.legalContent h3,
+.legalContent p,
+.legalContent ul,
+.legalContent address {
+  margin: 0;
+}
+
+.legalContent h2 {
+  color: #f8fafc;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.legalContent h3 {
+  color: #edf5ff;
+  font-size: 1.02rem;
+}
+
+.legalContent p,
+.legalContent li,
+.legalContent address {
+  color: #d4e1f7;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.legalContent address {
+  font-style: normal;
+}
+
+.legalContent ul {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1.35rem;
+}
+
+.legalPlaceholder {
+  color: #facc72 !important;
+}
+
+.legalUpdated {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  color: #9fb3d4 !important;
+  font-size: 0.86rem !important;
+}
+
+.legalCookieControl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(97, 167, 255, 0.28);
+  border-radius: 12px;
+  background: rgba(3, 9, 25, 0.55);
+}
+
+.legalCookieControl .footerLinkButton {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(97, 167, 255, 0.48);
+  border-radius: 7px;
+  background: rgba(22, 143, 255, 0.12);
+}
+
+.cookieConsent {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cookieConsentContent {
+  width: min(100%, 960px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(97, 167, 255, 0.42);
+  border-radius: 14px;
+  background: rgba(2, 9, 20, 0.98);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.48);
+  pointer-events: auto;
+}
+
+.cookieConsent h2 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.cookieConsent p {
+  margin: 0.45rem 0 0;
+  color: #cddbf6;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.cookieConsentActions {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.cookieConsent button {
+  min-height: 44px;
+  border-radius: 7px;
+  padding: 0.65rem 0.9rem;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cookieDecline {
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8fafc;
+}
+
+.cookieAccept {
+  border: 1px solid #22c55e;
+  background: #22c55e;
+  color: #052213;
+}
+
+.cookieConsent button:focus-visible {
+  outline: 2px solid #69b5ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .cookieConsentContent {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cookieConsentActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .legalCookieControl {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 540px) {
+  .footerInner,
+  .footerLinks {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cookieConsent {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .cookieConsentActions {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 1300px) {

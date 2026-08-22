@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState, useState, type ChangeEvent } from "react";
+import Link from "next/link";
 import { submitContactForm, type ContactFormState } from "./actions";
 
 const initialState: ContactFormState = { status: "idle", message: "" };
@@ -230,7 +231,14 @@ export function ContactForm() {
 
       <label className="consentField" htmlFor="datenschutz">
         <input id="datenschutz" name="datenschutz" type="checkbox" value="akzeptiert" required aria-invalid={Boolean(state.errors?.datenschutz)} />
-        <span>Ich stimme der Verarbeitung meiner Angaben und hochgeladenen Fotos zur Bearbeitung dieser Anfrage zu. <span aria-hidden="true">*</span></span>
+        <span>
+          Ich habe die{" "}
+          <Link href="/datenschutz" target="_blank" rel="noopener noreferrer">
+            Datenschutzerklärung
+          </Link>{" "}
+          gelesen und willige in die Verarbeitung meiner Angaben und hochgeladenen
+          Fotos zur Bearbeitung meiner Anfrage ein. <span aria-hidden="true">*</span>
+        </span>
       </label>
       <FieldError message={state.errors?.datenschutz} />
 

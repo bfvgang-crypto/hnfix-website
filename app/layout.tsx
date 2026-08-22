@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { AnalyticsConsent } from "./components/analytics-consent";
 import "./globals.css";
 
 const gaMeasurementId =
@@ -43,8 +43,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <body>{children}</body>
-      <GoogleAnalytics gaId={gaMeasurementId} />
+      <body>
+        {children}
+        <AnalyticsConsent gaId={gaMeasurementId} />
+      </body>
     </html>
   );
 }

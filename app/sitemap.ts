@@ -9,6 +9,8 @@ const routes = [
   "/fuer-vermieter",
   "/einsatzgebiet",
   "/kontakt",
+  "/impressum",
+  "/datenschutz",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
