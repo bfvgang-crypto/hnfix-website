@@ -336,9 +336,9 @@ a {
   background: linear-gradient(180deg, rgba(2, 8, 23, 0.06), #020b17 100%);
 }
 
-.serviceMedia img {
+.homeServices .serviceMedia img {
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
 }
 
 .homeServices .serviceIcon {
