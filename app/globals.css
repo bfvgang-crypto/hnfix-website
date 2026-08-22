@@ -656,6 +656,21 @@ a {
   align-items: start;
 }
 
+.contactQuoteLayout {
+  width: min(100% - 2rem, 1080px);
+  grid-template-columns: 1fr;
+}
+
+.quoteIntro {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.quoteIntro h2,
+.quoteIntro p {
+  margin: 0;
+}
+
 .contactForm {
   background: rgba(8, 20, 45, 0.92);
   border: 1px solid rgba(97, 167, 255, 0.2);
@@ -663,6 +678,99 @@ a {
   padding: 1.45rem;
   display: grid;
   gap: 0.9rem;
+}
+
+.quoteForm {
+  gap: 1.15rem;
+  padding: 1.6rem;
+}
+
+.quoteFormSection {
+  min-width: 0;
+  margin: 0;
+  padding: 1.15rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  background: rgba(3, 9, 25, 0.35);
+}
+
+.quoteFormSection legend {
+  padding: 0 0.45rem;
+  color: #f8fafc;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.sectionNumber {
+  display: inline-grid;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.45rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #052213;
+  font-size: 0.88rem;
+}
+
+.quoteFormGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.formFieldFull {
+  grid-column: 1 / -1;
+}
+
+.optionField {
+  display: grid;
+  align-content: start;
+  gap: 0.48rem;
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.radioOptionGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.serviceOptionGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contactForm .optionCard {
+  display: flex;
+  min-width: 0;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.72rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 10px;
+  background: rgba(3, 9, 25, 0.7);
+  color: #d9e7ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contactForm .optionCard:has(input:checked) {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  color: #ffffff;
+}
+
+.contactForm .optionCard input {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  accent-color: #22c55e;
 }
 
 .contactForm label {
@@ -693,6 +801,38 @@ a {
 .contactForm input::placeholder,
 .contactForm textarea::placeholder {
   color: #9fb3d4;
+}
+
+.contactForm input[type="date"] {
+  color-scheme: dark;
+}
+
+.photoUpload {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.photoUpload input[type="file"] {
+  padding: 0.55rem;
+}
+
+.photoUpload input[type="file"]::file-selector-button {
+  margin-right: 0.75rem;
+  border: 0;
+  border-radius: 8px;
+  background: #d9e7ff;
+  color: #071630;
+  padding: 0.58rem 0.72rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.fileSummary {
+  margin: 0;
+  color: #86efac;
+  font-size: 0.86rem;
+  font-weight: 600;
 }
 
 .contactForm button {
@@ -760,6 +900,40 @@ a {
 
 .formSuccess h2 {
   margin: 0;
+}
+
+@media (max-width: 700px) {
+  .quoteForm {
+    padding: 1rem;
+  }
+
+  .quoteFormSection {
+    padding: 1rem 0.85rem;
+  }
+
+  .quoteFormGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formFieldFull {
+    grid-column: auto;
+  }
+
+  .optionGrid,
+  .serviceOptionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .optionGrid,
+  .serviceOptionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .radioOptionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .siteFooter {

@@ -17,19 +17,20 @@ export default function KontaktPage() {
           <p className="sectionEyebrow">Kontakt</p>
           <h1>Kostenloses Angebot für Ihr Anliegen anfragen</h1>
           <p className="sectionLead">
-            Senden Sie uns Ihre Daten und eine kurze Beschreibung. Wir melden
-            uns zeitnah mit einem passenden Angebot.
+            Beschreiben Sie Ihr Objekt und den gewünschten Leistungsumfang.
+            Wir melden uns zeitnah mit einem transparenten Angebot.
           </p>
         </div>
       </section>
 
       <section className="section">
-        <div className="container contactLayout">
-          <div className="contentPanel">
+        <div className="container contactLayout contactQuoteLayout">
+          <div className="contentPanel quoteIntro">
             <h2>Ihre Anfrage in wenigen Schritten</h2>
             <p className="sectionLead">
               Je genauer Ihre Angaben sind, desto schneller erhalten Sie ein
-              passendes Angebot.
+              passendes und unverbindliches Angebot. Fotos helfen uns dabei,
+              den Aufwand realistisch einzuschätzen.
             </p>
           </div>
 
