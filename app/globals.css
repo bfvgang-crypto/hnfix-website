@@ -148,7 +148,7 @@ a {
   min-height: 670px;
   padding: 11.65rem 0 2.8rem;
   overflow: hidden;
-  background-image: url("/hero.png");
+  background-image: url("/hero.webp");
   background-size: cover;
   background-position: center center;
 }
