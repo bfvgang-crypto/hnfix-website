@@ -39,20 +39,20 @@ a {
   left: 0;
   width: 100%;
   z-index: 50;
-  background: rgba(4, 12, 31, 0.82);
+  background: rgba(4, 12, 31, 0.88);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  height: 88px;
+  height: 96px;
 }
 
 .headerInner {
-  height: 88px;
-  min-height: 88px;
+  height: 96px;
+  min-height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.2rem 0;
+  padding: 0;
 }
 
 .brand {
@@ -63,7 +63,7 @@ a {
 }
 
 .brand img {
-  width: clamp(118px, 11vw, 152px);
+  width: 160px;
   height: auto;
   display: block;
 }
@@ -106,8 +106,8 @@ a {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: min(92vh, 900px);
-  padding: 8.25rem 0 8.8rem;
+  min-height: 700px;
+  padding: 7.5rem 0 3rem;
   overflow: hidden;
   background-image: linear-gradient(
       105deg,
@@ -117,7 +117,7 @@ a {
     ),
     url("/placeholders/hero-hnfix.svg");
   background-size: cover;
-  background-position: center right;
+  background-position: center center;
 }
 
 .heroOverlay {
