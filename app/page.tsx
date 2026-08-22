@@ -5,7 +5,7 @@ import { ProcessSteps } from "./components/process-steps";
 import { ServicesGrid } from "./components/services-grid";
 
 const heroBenefits = [
-  "Kostenlose Anfrage",
+  "Kostenlose Anfrage & Festpreis",
   "Schnelle Termine",
   "Zuverlässiger Service",
   "Fachgerechte Entsorgung",
@@ -41,10 +41,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section sectionTopTight">
-        <div className="container">
-          <p className="sectionEyebrow">Leistungen</p>
-          <h2>Professioneller Service rund um Haus und Objekt</h2>
+      <section className="homeServices" aria-label="Leistungen">
+        <div className="homeServicesInner">
           <ServicesGrid />
         </div>
       </section>

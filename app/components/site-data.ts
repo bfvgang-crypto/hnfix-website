@@ -60,10 +60,26 @@ export const services = [
 ];
 
 export const qualityBenefits = [
-  "Festpreis Garantie",
-  "Schnelle Termine",
-  "Fachgerechte Entsorgung",
-  "Persönlicher Service",
+  {
+    icon: "◇",
+    title: "Festpreis Garantie",
+    description: "Transparente Preise ohne versteckte Kosten.",
+  },
+  {
+    icon: "◷",
+    title: "Schnelle Termine",
+    description: "Kurzfristige Termine möglich – wir sind für Sie da.",
+  },
+  {
+    icon: "♻",
+    title: "Fachgerechte Entsorgung",
+    description: "Umweltgerecht, zuverlässig und sauber.",
+  },
+  {
+    icon: "♙",
+    title: "Persönlicher Service",
+    description: "Direkter Kontakt und individuelle Lösungen.",
+  },
 ];
 
 export const processSteps = [
