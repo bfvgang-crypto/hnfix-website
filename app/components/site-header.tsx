@@ -10,8 +10,8 @@ export function SiteHeader() {
           <Image
             src="/logo.png"
             alt="HNFix Haus & Objekt Service Heilbronn"
-            width={170}
-            height={68}
+            width={150}
+            height={58}
             priority
           />
         </Link>

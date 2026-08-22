@@ -42,37 +42,46 @@ a {
   background: rgba(4, 12, 31, 0.82);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
+  height: 88px;
 }
 
 .headerInner {
-  min-height: 90px;
+  height: 88px;
+  min-height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1rem;
+  padding: 0.2rem 0;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 .brand img {
-  width: clamp(170px, 15vw, 225px);
+  width: clamp(118px, 11vw, 152px);
   height: auto;
+  display: block;
 }
 
 .mainNav {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  justify-content: center;
+  gap: 1rem;
   font-weight: 600;
   color: #d7e6ff;
+  margin: 0 auto;
+  flex: 1 1 auto;
 }
 
 .mainNav a {
-  padding: 0.35rem 0.25rem;
+  padding: 0.3rem 0.2rem;
+  font-size: 0.94rem;
   transition: color 0.2s ease;
 }
 
@@ -88,16 +97,17 @@ a {
   color: #04210f;
   font-weight: 800;
   border-radius: 12px;
-  min-height: 44px;
-  padding: 0.55rem 1rem;
+  min-height: 40px;
+  padding: 0.5rem 0.9rem;
   white-space: nowrap;
+  font-size: 0.88rem;
 }
 
 .hero {
   position: relative;
   isolation: isolate;
   min-height: min(92vh, 900px);
-  padding: 10.5rem 0 8.8rem;
+  padding: 8.25rem 0 8.8rem;
   overflow: hidden;
   background-image: linear-gradient(
       105deg,
@@ -191,7 +201,7 @@ a {
 }
 
 .pageHero {
-  padding: 9.5rem 0 3rem;
+  padding: 7.6rem 0 3rem;
 }
 
 .section {
@@ -444,11 +454,16 @@ a {
 
   .headerInner {
     min-height: 82px;
+    height: 82px;
+  }
+
+  .siteHeader {
+    height: 82px;
   }
 
   .hero {
     min-height: auto;
-    padding-top: 9.8rem;
+    padding-top: 8.2rem;
   }
 }
 
