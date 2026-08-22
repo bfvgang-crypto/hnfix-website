@@ -487,11 +487,12 @@ a {
 
 .benefitsGrid {
   width: min(1368px, calc(100% - 4.5rem));
-  min-height: 150px;
+  min-height: 112px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   align-items: center;
+  padding: 0.75rem 0;
 }
 
 .benefitItem {
@@ -543,34 +544,66 @@ a {
   background: rgba(9, 24, 56, 0.72);
 }
 
+.processSection {
+  padding: 3rem 0 3.25rem;
+}
+
 .stepsGrid {
-  margin-top: 1.75rem;
+  margin-top: 1.4rem;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .stepCard {
-  background: rgba(10, 27, 61, 0.95);
+  position: relative;
+  overflow: hidden;
+  min-height: 158px;
+  background: linear-gradient(145deg, rgba(15, 39, 82, 0.96), rgba(7, 20, 46, 0.98));
   border-radius: 16px;
-  border: 1px solid rgba(97, 167, 255, 0.24);
-  padding: 1.2rem;
+  border: 1px solid rgba(97, 167, 255, 0.3);
+  padding: 1rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
-.stepCard span {
+.stepCard::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, #168fff, rgba(22, 143, 255, 0));
+}
+
+.stepCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.stepNumber {
+  flex: 0 0 auto;
   display: inline-grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border-radius: 999px;
   background: #22c55e;
   color: #052213;
+  font-size: 0.9rem;
   font-weight: 800;
 }
 
 .stepCard h3 {
-  margin: 0.85rem 0 0;
-  font-size: 1.02rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.stepCard p {
+  margin: 0.75rem 0 0;
+  color: #cddbf6;
+  font-size: 0.87rem;
+  line-height: 1.5;
 }
 
 .contentPanel {
@@ -704,8 +737,8 @@ a {
 
   .benefitsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 1.6rem 0;
-    row-gap: 1.8rem;
+    padding: 0.85rem 0;
+    row-gap: 0.9rem;
   }
 
   .benefitItem:nth-child(2) {
@@ -725,12 +758,16 @@ a {
     padding-top: 7.5rem;
   }
 
+  .stepsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sectionTopTight {
     margin-top: -3.2rem;
   }
 
   .benefitsGrid {
-    padding: 1.2rem 0;
+    padding: 0.8rem 0;
   }
 
   .homeServicesInner,
@@ -751,7 +788,7 @@ a {
   .benefitItem,
   .benefitItem:first-child,
   .benefitItem:last-child {
-    padding: 0 0 1.2rem;
+    padding: 0 0 0.85rem;
     border-right: 0;
     border-bottom: 1px solid rgba(148, 163, 184, 0.22);
   }
@@ -786,5 +823,19 @@ a {
 
   .heroActions .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .processSection {
+    padding: 2.5rem 0;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .stepCard {
+    min-height: 0;
   }
 }

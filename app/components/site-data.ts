@@ -77,8 +77,24 @@ export const qualityBenefits = [
 ];
 
 export const processSteps = [
-  "Anfrage stellen",
-  "Fotos & Details senden",
-  "Angebot erhalten",
-  "Termin vereinbaren",
+  {
+    title: "Anfrage senden",
+    description:
+      "Füllen Sie unser Anfrageformular aus und beschreiben Sie Ihr Projekt.",
+  },
+  {
+    title: "Fotos & Details senden",
+    description:
+      "Senden Sie uns Bilder und wichtige Informationen zum Objekt.",
+  },
+  {
+    title: "Kostenloses Angebot erhalten",
+    description:
+      "Wir prüfen Ihre Anfrage und erstellen ein transparentes Angebot.",
+  },
+  {
+    title: "Termin vereinbaren",
+    description:
+      "Wir vereinbaren einen passenden Termin und kümmern uns um den Rest.",
+  },
 ];
