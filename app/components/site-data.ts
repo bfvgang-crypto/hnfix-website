@@ -10,42 +10,36 @@ export const navigation = [
 
 export const services = [
   {
-    icon: "🧼",
     title: "Reinigung",
     image: "/placeholders/reinigung.png",
     href: "/reinigung",
     description: "Sauberkeit, auf die Sie sich verlassen können.",
   },
   {
-    icon: "🏢",
     title: "Treppenhaus",
     image: "/placeholders/TREPPENHAUS.png",
     href: "/hausservice",
     description: "Gepflegte Treppenhäuser für ein positives Bild.",
   },
   {
-    icon: "🧰",
     title: "Keller & Garage",
     image: "/placeholders/keller-garage.png",
     href: "/hausservice",
     description: "Wir räumen und reinigen Ihre Nebenräume.",
   },
   {
-    icon: "📦",
     title: "Entrümpelung",
     image: "/placeholders/entruempelung.png",
     href: "/entruempelung",
     description: "Schnell, zuverlässig und besenrein.",
   },
   {
-    icon: "🚛",
     title: "Sperrmüll",
     image: "/placeholders/sperrmuell.png",
     href: "/entruempelung",
     description: "Fachgerechte Vorbereitung zur Abholung.",
   },
   {
-    icon: "🌿",
     title: "Außenbereich",
     image: "/placeholders/AUSSENBEREICH.png",
     href: "/hausservice",
