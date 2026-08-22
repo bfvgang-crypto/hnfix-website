@@ -110,10 +110,11 @@ a {
   padding: 7.5rem 0 3rem;
   overflow: hidden;
   background-image: linear-gradient(
-      105deg,
-      rgba(1, 7, 20, 0.84) 16%,
-      rgba(1, 7, 20, 0.5) 52%,
-      rgba(2, 12, 34, 0.58) 100%
+      90deg,
+  rgba(1, 7, 20, 0.70) 0%,
+  rgba(1, 7, 20, 0.45) 30%,
+  rgba(1, 7, 20, 0.12) 45%,
+  rgba(1, 7, 20, 0) 60%
     ),
     url("/hero.png");
   background-size: cover;
@@ -144,10 +145,10 @@ a {
 .hero h1,
 .pageHero h1 {
   margin: 1rem 0 1.2rem;
-  font-size: clamp(2.2rem, 6vw, 5rem);
-  line-height: 1;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  line-height: 1.05;
   letter-spacing: -0.03em;
-  max-width: 13ch;
+  max-width: 18ch;
   text-wrap: balance;
 }
 
