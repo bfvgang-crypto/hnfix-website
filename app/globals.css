@@ -115,7 +115,7 @@ a {
       rgba(1, 7, 20, 0.5) 52%,
       rgba(2, 12, 34, 0.58) 100%
     ),
-    url("/placeholders/hero-hnfix.svg");
+    url("/hero.png");
   background-size: cover;
   background-position: center center;
 }
