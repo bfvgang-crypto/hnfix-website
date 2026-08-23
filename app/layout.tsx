@@ -3,7 +3,7 @@ import { AnalyticsConsent } from "./components/analytics-consent";
 import "./globals.css";
 
 const gaMeasurementId =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-LR6B2PCR3B";
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-LR6B2PC3RB";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hnfix.de"),
