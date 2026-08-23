@@ -1461,4 +1461,17 @@ a {
   .stepCard {
     min-height: 0;
   }
+  .pageHeroCompact {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.sectionCompact {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.seoPanel p {
+  margin-bottom: 12px;
+}
 }
