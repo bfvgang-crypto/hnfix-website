@@ -5,8 +5,21 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navigation } from "./site-data";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const trackOfferClick = () => {
+    window.gtag?.("event", "offer_click", {
+      button_name: "Kostenloses Angebot",
+      location: "header",
+    });
+  };
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -16,6 +29,7 @@ export function SiteHeader() {
     };
 
     document.addEventListener("keydown", closeOnEscape);
+
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, [menuOpen]);
 
@@ -40,7 +54,11 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link href="/kontakt" className="headerCta">
+        <Link
+          href="/kontakt"
+          className="headerCta"
+          onClick={trackOfferClick}
+        >
           <svg
             className="headerCtaIcon"
             viewBox="0 0 24 24"
@@ -88,10 +106,14 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+
           <Link
             href="/kontakt"
             className="mobileNavCta"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              trackOfferClick();
+              setMenuOpen(false);
+            }}
           >
             Kostenloses Angebot
           </Link>
