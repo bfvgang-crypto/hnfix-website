@@ -76,7 +76,7 @@ export default function ReinigungHeilbronnPage() {
         <div className="container contentPanel">
           <ServiceImage
             src="/placeholders/reinigung.png"
-            alt="Gebäudereinigung für ein gepflegtes Objekt in Heilbronn"
+            alt="Professionelle Reinigung von Wohnung und Treppenhaus in Heilbronn"
             caption="Gebäudereinigung für private und gewerbliche Objekte in Heilbronn."
           />
           <h2>Reinigungsleistungen in Heilbronn</h2>

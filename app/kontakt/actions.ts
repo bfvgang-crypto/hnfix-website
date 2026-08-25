@@ -40,13 +40,18 @@ const allowedObjectTypes = new Set([
   "Sonstiges",
 ]);
 const allowedElevatorOptions = new Set(["Ja", "Nein"]);
-const allowedConditions = new Set(["Wenig", "Normal", "Voll", "Sehr voll"]);
+const allowedConditions = new Set([
+  "Wenig gefüllt",
+  "Normal gefüllt",
+  "Voll",
+  "Sehr voll",
+]);
 const allowedAdditionalSpaces = new Set(["Keller", "Dachboden", "Garage"]);
 const allowedServices = new Set([
   "Entrümpelung",
-  "Demontage Möbel",
-  "Demontage Küche",
-  "Sperrmüll",
+  "Möbeldemontage",
+  "Küchendemontage",
+  "Sperrmüllbereitstellung",
   "Endreinigung",
   "Sonstiges",
 ]);
@@ -134,7 +139,7 @@ function validate(formData: FormData) {
     errors.aufzug = "Bitte wählen Sie Ja oder Nein aus.";
   }
   if (!allowedConditions.has(values.zustand)) {
-    errors.zustand = "Bitte wählen Sie den Zustand aus.";
+    errors.zustand = "Bitte wählen Sie den Füllstand aus.";
   }
   if (values.nebenraeume.some((value) => !allowedAdditionalSpaces.has(value))) {
     errors.nebenraeume = "Bitte prüfen Sie die ausgewählten Nebenräume.";
@@ -361,7 +366,7 @@ export async function submitContactForm(
         <p><strong>Anzahl Zimmer:</strong> ${safe.zimmer}</p>
         <p><strong>Etage:</strong> ${safe.etage}</p>
         <p><strong>Aufzug vorhanden:</strong> ${safe.aufzug}</p>
-        <p><strong>Zustand:</strong> ${safe.zustand}</p>
+        <p><strong>Füllstand:</strong> ${safe.zustand}</p>
         <p><strong>Keller / Dachboden / Garage:</strong> ${displayList(safe.nebenraeume)}</p>
         <p><strong>Baujahr:</strong> ${safe.baujahr || "Nicht angegeben"}</p>
         <p><strong>Gewünschte Leistungen:</strong> ${displayList(safe.leistungen)}</p>
@@ -383,7 +388,7 @@ export async function submitContactForm(
         `Anzahl Zimmer: ${values.zimmer}`,
         `Etage: ${values.etage}`,
         `Aufzug vorhanden: ${values.aufzug}`,
-        `Zustand: ${values.zustand}`,
+        `Füllstand: ${values.zustand}`,
         `Keller / Dachboden / Garage: ${displayList(values.nebenraeume)}`,
         `Baujahr: ${values.baujahr || "Nicht angegeben"}`,
         `Gewünschte Leistungen: ${displayList(values.leistungen)}`,

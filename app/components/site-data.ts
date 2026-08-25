@@ -12,38 +12,44 @@ export const services = [
   {
     title: "Reinigung",
     image: "/placeholders/reinigung.png",
+    alt: "Professionelle Reinigung von Wohnung und Treppenhaus in Heilbronn",
     href: "/reinigung",
     description: "Sauberkeit, auf die Sie sich verlassen können.",
   },
   {
     title: "Treppenhaus",
     image: "/placeholders/TREPPENHAUS.png",
+    alt: "Gepflegtes Treppenhaus in einem Wohnhaus in Heilbronn",
     href: "/hausservice",
     description: "Gepflegte Treppenhäuser für ein positives Bild.",
   },
   {
     title: "Keller & Garage",
     image: "/placeholders/keller-garage.png",
+    alt: "Ordentlicher Keller und Garage mit Regalen und Kartons in Heilbronn",
     href: "/hausservice",
     description: "Wir räumen und reinigen Ihre Nebenräume.",
   },
   {
     title: "Entrümpelung",
     image: "/placeholders/entruempelung.png",
+    alt: "Sortierte Kellerentrümpelung mit Kartons und Sperrmüllbereitstellung in Heilbronn",
     href: "/entruempelung",
     description: "Schnell, zuverlässig und besenrein.",
   },
   {
     title: "Sperrmüll",
     image: "/placeholders/sperrmuell.png",
+    alt: "Vorbereiteter Sperrmüll zur Abholung vor einer Immobilie in Heilbronn",
     href: "/entruempelung",
     description: "Fachgerechte Vorbereitung zur Abholung.",
   },
   {
     title: "Außenbereich",
     image: "/placeholders/AUSSENBEREICH.png",
+    alt: "Gepflegter Außenbereich mit Hofreinigung und Laubentsorgung in Heilbronn",
     href: "/hausservice",
-    description: "Hof, Garten & Außenflächen in besten Händen.",
+    description: "Hof, Wege und Außenflächen sauber gehalten.",
   },
 ];
 
@@ -60,8 +66,8 @@ export const qualityBenefits = [
   },
   {
     icon: "recycle",
-    title: "Fachgerechte Entsorgung",
-    description: "Umweltgerecht, zuverlässig und sauber.",
+    title: "Vorbereitung zur Abholung",
+    description: "Sperrmüll wird sortiert und zur Abholung bereitgestellt.",
   },
   {
     icon: "user",
@@ -79,7 +85,7 @@ export const processSteps = [
   {
     title: "Fotos & Details senden",
     description:
-      "Nach unserer Antwort können Sie Bilder und weitere Details sicher per E-Mail senden.",
+      "Laden Sie optional Bilder hoch und ergänzen Sie die wichtigsten Details.",
   },
   {
     title: "Kostenloses Angebot erhalten",

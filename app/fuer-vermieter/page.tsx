@@ -73,7 +73,7 @@ export default function FuerVermieterPage() {
         <div className="container contentPanel">
           <ServiceImage
             src="/placeholders/keller-garage.png"
-            alt="Aufgeräumter Keller- und Garagenbereich einer vermieteten Immobilie"
+            alt="Ordentlicher Keller und Garage mit Regalen und Kartons in Heilbronn"
             caption="Objektservice für Vermieter, Eigentümer und Hausverwaltungen."
           />
           <h2>Ihre Vorteile mit HNFix</h2>

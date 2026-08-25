@@ -78,7 +78,7 @@ export default function EinsatzgebietPage() {
         <div className="container contentPanel">
           <ServiceImage
             src="/placeholders/AUSSENBEREICH.png"
-            alt="Gepflegte Außenfläche im Einsatzgebiet von HNFix rund um Heilbronn"
+            alt="Gepflegter Außenbereich mit Hofreinigung und Laubentsorgung in Heilbronn"
             caption="Regionaler Haus- und Objektservice in Heilbronn und Umgebung."
           />
           <h2>Regionen im Überblick</h2>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | HNFix",
   },
   description:
-    "HNFix bietet Reinigung, Entrümpelung, Keller- und Garagenservice, Sperrmüllbereitstellung und Gartenpflege in Heilbronn und Umgebung.",
+    "HNFix bietet Reinigung, Entrümpelung, Keller- und Garagenservice, Sperrmüllbereitstellung und leichte Außenpflege in Heilbronn und Umgebung.",
   applicationName: "HNFix",
   category: "Haus- und Objektservice",
   keywords: [
@@ -84,7 +84,7 @@ const organizationJsonLd = {
           "Entrümpelung",
           "Keller- und Garagenservice",
           "Sperrmüllbereitstellung",
-          "Außenflächenpflege",
+          "Leichte Außenflächenpflege",
         ].map((name) => ({
           "@type": "Offer",
           itemOffered: { "@type": "Service", name },

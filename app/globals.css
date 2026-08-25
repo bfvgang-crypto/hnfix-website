@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -204,8 +205,9 @@ a {
 }
 
 .pageHero h1 {
-  font-size: clamp(2rem, 4.5vw, 4rem);
-  max-width: 18ch;
+  font-size: clamp(1.9rem, 3.8vw, 3.35rem);
+  line-height: 1.1;
+  max-width: 22ch;
 }
 
 .heroSubtitle {
@@ -1492,16 +1494,16 @@ a {
     min-height: 0;
   }
   .pageHeroCompact {
-  padding-top: 70px;
-  padding-bottom: 50px;
-}
+    padding-top: 7.125rem;
+    padding-bottom: 50px;
+  }
 
-.sectionCompact {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
+  .sectionCompact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
-.seoPanel p {
-  margin-bottom: 12px;
-}
+  .seoPanel p {
+    margin-bottom: 12px;
+  }
 }

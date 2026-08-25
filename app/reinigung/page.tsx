@@ -12,8 +12,8 @@ import {
 import { createPageMetadata } from "../metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Reinigung für Haus, Wohnung & Gewerbe Heilbronn",
-  "Reinigung für Wohnungen, Häuser, Treppenhäuser und Gewerbeobjekte in Heilbronn. Einmalig oder regelmäßig – jetzt HNFix Angebot anfragen.",
+  "Reinigung für Haus, Wohnung & Gewerbe in Heilbronn",
+  "Reinigung für Wohnungen, Häuser, Treppenhäuser und Gewerbeobjekte in Heilbronn. Einmalig oder regelmäßig – jetzt Angebot bei HNFix anfragen.",
   "/reinigung",
 );
 
@@ -80,7 +80,7 @@ export default function ReinigungPage() {
         <div className="container contentPanel">
           <ServiceImage
             src="/placeholders/reinigung.png"
-            alt="Reinigung einer Immobilie durch einen Haus- und Objektservice"
+            alt="Professionelle Reinigung von Wohnung und Treppenhaus in Heilbronn"
             caption="Reinigung für Wohnungen, Häuser, Treppenhäuser und Gewerbeobjekte."
           />
           <h2>Leistungsumfang Reinigung</h2>

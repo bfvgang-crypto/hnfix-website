@@ -13,7 +13,7 @@ import { createPageMetadata } from "../metadata";
 
 export const metadata: Metadata = createPageMetadata(
   "Hausservice & Objektpflege Heilbronn",
-  "Hausservice in Heilbronn für Treppenhaus, Keller, Garage, Sperrmüll und Außenflächen. Flexible Objektpflege für Eigentümer und Verwaltungen.",
+  "Hausservice in Heilbronn für Treppenhaus, Keller, Garage, Sperrmüllbereitstellung und leichte Außenpflege. Für Eigentümer und Verwaltungen.",
   "/hausservice",
 );
 
@@ -21,14 +21,14 @@ const services = [
   "Treppenhausreinigung",
   "Keller- und Garagenservice",
   "Sperrmüllbereitstellung",
-  "Pflege von Hof- und Außenflächen",
+  "Leichte Pflege von Hof- und Außenflächen",
 ];
 
 const houseServiceFaqs = [
   {
     question: "Was gehört zum Hausservice von HNFix?",
     answer:
-      "Zum Hausservice gehören je nach Vereinbarung Treppenhausreinigung, Keller- und Garagenservice, Sperrmüllbereitstellung sowie die Pflege von Hof- und Außenflächen.",
+      "Zum Hausservice gehören je nach Vereinbarung Treppenhausreinigung, Keller- und Garagenservice, Sperrmüllbereitstellung sowie leichte Arbeiten an Hof- und Außenflächen.",
   },
   {
     question: "Kann der Hausservice regelmäßig gebucht werden?",
@@ -51,7 +51,7 @@ export default function HausservicePage() {
           createServiceJsonLd({
             name: "Hausservice und Objektpflege Heilbronn",
             description:
-              "Treppenhaus-, Keller-, Garagen- und Außenflächenpflege für Eigentümer und Hausverwaltungen.",
+              "Treppenhauspflege, Keller- und Garagenservice sowie leichte Pflege von Hof- und Außenflächen für Eigentümer und Hausverwaltungen.",
             path: "/hausservice",
             serviceType: ["Hausservice", "Objektpflege", "Treppenhausreinigung"],
           }),
@@ -73,7 +73,7 @@ export default function HausservicePage() {
         <div className="container contentPanel">
           <ServiceImage
             src="/placeholders/TREPPENHAUS.png"
-            alt="Gepflegtes Treppenhaus als Teil des HNFix Hausservice"
+            alt="Gepflegtes Treppenhaus in einem Wohnhaus in Heilbronn"
             caption="Regelmäßige Pflege von Treppenhäusern und gemeinschaftlich genutzten Flächen."
           />
           <h2>Typische Hausservice-Leistungen</h2>

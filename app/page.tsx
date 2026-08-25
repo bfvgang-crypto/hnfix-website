@@ -24,7 +24,7 @@ const heroBenefits = [
   "Kostenlose Anfrage & Festpreis",
   "Schnelle Termine",
   "Zuverlässiger Service",
-  "Fachgerechte Entsorgung",
+  "Sperrmüllbereitstellung",
 ];
 
 const homeFaqs = [

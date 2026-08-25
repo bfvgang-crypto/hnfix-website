@@ -92,7 +92,7 @@ export function ServicesGrid() {
             <div className="serviceMedia">
               <Image
                 src={service.image}
-                alt=""
+                alt={service.alt}
                 fill
                 sizes="(max-width: 900px) 100vw, (max-width: 1100px) 33vw, 17vw"
               />

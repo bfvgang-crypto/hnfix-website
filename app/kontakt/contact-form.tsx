@@ -12,13 +12,18 @@ const objectTypes = [
   "Gewerbeobjekt",
   "Sonstiges",
 ] as const;
-const conditionOptions = ["Wenig", "Normal", "Voll", "Sehr voll"] as const;
+const conditionOptions = [
+  "Wenig gefüllt",
+  "Normal gefüllt",
+  "Voll",
+  "Sehr voll",
+] as const;
 const additionalSpaceOptions = ["Keller", "Dachboden", "Garage"] as const;
 const serviceOptions = [
   "Entrümpelung",
-  "Demontage Möbel",
-  "Demontage Küche",
-  "Sperrmüll",
+  "Möbeldemontage",
+  "Küchendemontage",
+  "Sperrmüllbereitstellung",
   "Endreinigung",
   "Sonstiges",
 ] as const;
@@ -139,7 +144,7 @@ export function ContactForm() {
           </div>
 
           <label className="formField" htmlFor="zustand">
-            <span className="labelText">Zustand der Wohnung <span aria-hidden="true">*</span></span>
+            <span className="labelText">Füllstand des Objekts <span aria-hidden="true">*</span></span>
             <select id="zustand" name="zustand" defaultValue="" required aria-invalid={Boolean(state.errors?.zustand)}>
               <option value="" disabled>Bitte auswählen</option>
               {conditionOptions.map((option) => <option key={option} value={option}>{option}</option>)}

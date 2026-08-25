@@ -13,14 +13,14 @@ import { createPageMetadata } from "../metadata";
 
 export const metadata: Metadata = createPageMetadata(
   "Entrümpelung Heilbronn mit besenreiner Übergabe",
-  "Entrümpelung in Heilbronn für Wohnung, Haus, Keller und Garage – mit Transport, Entsorgung nach Absprache und besenreiner Übergabe.",
+  "Entrümpelung in Heilbronn für Wohnung, Haus, Keller und Garage – mit Demontage, Vorbereitung zur Abholung und besenreiner Übergabe.",
   "/entruempelung",
 );
 
 const points = [
   "Wohnungen, Häuser, Keller und Garagen",
-  "Demontage, Transport und besenreine Übergabe",
-  "Fachgerechte Entsorgung nach Absprache",
+  "Demontage, Sortierung und besenreine Übergabe",
+  "Sperrmüllbereitstellung zur Abholung nach Absprache",
   "Planbare Termine auch bei kurzfristigem Bedarf",
 ];
 
@@ -51,7 +51,7 @@ export default function EntruempelungPage() {
           createServiceJsonLd({
             name: "Entrümpelung in Heilbronn und Umgebung",
             description:
-              "Entrümpelung von Wohnungen, Häusern, Kellern und Garagen mit Transport und besenreiner Übergabe.",
+              "Entrümpelung von Wohnungen, Häusern, Kellern und Garagen mit Vorbereitung zur Abholung und besenreiner Übergabe.",
             path: "/entruempelung",
             serviceType: ["Entrümpelung", "Haushaltsauflösung", "Kellerräumung"],
           }),
@@ -73,7 +73,7 @@ export default function EntruempelungPage() {
         <div className="container contentPanel">
           <ServiceImage
             src="/placeholders/entruempelung.png"
-            alt="Vorbereitete Entrümpelung einer Wohnung in der Region Heilbronn"
+            alt="Sortierte Kellerentrümpelung mit Kartons und Sperrmüllbereitstellung in Heilbronn"
             caption="Entrümpelung von Wohnungen, Häusern, Kellern und Garagen."
           />
           <h2>Unser Entrümpelungsservice</h2>
