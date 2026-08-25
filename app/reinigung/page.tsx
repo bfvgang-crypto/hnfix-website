@@ -4,15 +4,15 @@ import { PageShell } from "../components/page-shell";
 import { createPageMetadata } from "../metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "Gebäudereinigung Heilbronn",
-  "Professionelle Gebäudereinigung in Heilbronn und Umgebung. HNFix bietet Hausreinigung, Wohnungsreinigung, Treppenhausreinigung und Objektpflege für Privatkunden, Vermieter und Unternehmen.",
-  "/reinigung-heilbronn",
+  "Reinigung für Haus und Objekt",
+  "Zuverlässige Reinigung von Wohnungen, Häusern, Treppenhäusern und gewerblichen Objekten durch HNFix.",
+  "/reinigung",
 );
 
 const cleaningServices = [
-  "Gebäudereinigung für Privatkunden und Unternehmen",
-  "Treppenhausreinigung in Heilbronn",
-  "Grundreinigung und Objektpflege",
+  "Gebäudereinigung für private und gewerbliche Objekte",
+  "Regelmäßige Treppenhausreinigung",
+  "Grundreinigung und laufende Objektpflege",
   "Reinigung vor Wohnungsübergaben",
 ];
 
@@ -21,18 +21,13 @@ export default function ReinigungPage() {
     <PageShell>
       <section className="pageHero pageHeroCompact">
         <div className="container">
-          <p className="sectionEyebrow">
-            Gebäudereinigung Heilbronn
-          </p>
+          <p className="sectionEyebrow">Reinigung</p>
 
-          <h1>
-            Professionelle Gebäudereinigung in Heilbronn
-          </h1>
+          <h1>Zuverlässige Reinigung für Haus und Objekt</h1>
 
           <p className="sectionLead">
-            Zuverlässige Reinigung für Wohnungen, Häuser,
-            Treppenhäuser und gewerbliche Objekte in Heilbronn
-            und Umgebung.
+            Saubere Wohnungen, Häuser, Treppenhäuser und Gewerbeflächen –
+            passend zum Objekt und zum gewünschten Rhythmus.
           </p>
         </div>
       </section>
@@ -55,27 +50,22 @@ export default function ReinigungPage() {
 
       <section className="section sectionCompact">
         <div className="container contentPanel seoPanel">
-          <h2>
-            Gebäudereinigung Heilbronn und Umgebung
-          </h2>
+          <h2>Reinigung passend zu Ihrem Objekt</h2>
 
           <p>
-            HNFix Haus & Objekt Service bietet professionelle
-            Gebäudereinigung für Privatkunden, Vermieter und
-            Unternehmen in Heilbronn.
+            HNFix übernimmt einmalige und regelmäßige Reinigungsarbeiten für
+            Privatkunden, Vermieter, Hausverwaltungen und Unternehmen.
           </p>
 
           <p>
-            Wir übernehmen Wohnungsreinigung,
-            Treppenhausreinigung, Grundreinigung und
-            Objektpflege mit zuverlässigen Abläufen und
-            fairen Angeboten.
+            Leistungsumfang, Turnus und Zugang zum Objekt stimmen wir vorab
+            transparent ab. So erhalten Sie ein Angebot, das zum tatsächlichen
+            Aufwand passt.
           </p>
 
           <p>
-            Unser Einsatzgebiet umfasst Heilbronn und die
-            Umgebung, darunter Neckarsulm,
-            Bad Friedrichshall, Flein, Leingarten und Weinsberg.
+            Für weitere lokale Informationen besuchen Sie unsere Seite zur{" "}
+            <Link href="/reinigung-heilbronn">Gebäudereinigung in Heilbronn</Link>.
           </p>
         </div>
       </section>

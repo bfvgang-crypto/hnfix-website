@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { AnalyticsConsent } from "./components/analytics-consent";
+import { SITE_URL } from "./metadata";
 import "./globals.css";
 
 const gaMeasurementId =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-LR6B2PC3RB";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hnfix.de"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "HNFix | Haus & Objekt Service Heilbronn",
     template: "%s | HNFix",
@@ -14,6 +15,10 @@ export const metadata: Metadata = {
   description:
     "HNFix bietet Reinigung, Entrümpelung, Keller- und Garagenservice, Sperrmüllbereitstellung und Gartenpflege in Heilbronn und Umgebung.",
   applicationName: "HNFix",
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: "website",
     locale: "de_DE",

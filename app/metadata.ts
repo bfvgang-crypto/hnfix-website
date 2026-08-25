@@ -2,19 +2,23 @@ import type { Metadata } from "next";
 
 const siteName = "HNFix";
 
+export const SITE_URL = "https://www.hnfix.de";
+
 export function createPageMetadata(
   title: string,
   description: string,
   path: string,
 ): Metadata {
+  const canonicalUrl = new URL(path, SITE_URL).toString();
+
   return {
     title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       type: "website",
       locale: "de_DE",
-      url: path,
+      url: canonicalUrl,
       siteName,
       title,
       description,
