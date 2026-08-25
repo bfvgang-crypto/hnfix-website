@@ -2,17 +2,33 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CookieSettingsButton } from "../components/cookie-settings-button";
 import { PageShell } from "../components/page-shell";
+import {
+  createBreadcrumbJsonLd,
+  createWebPageJsonLd,
+  JsonLd,
+} from "../components/seo-content";
 import { createPageMetadata } from "../metadata";
 
 export const metadata: Metadata = createPageMetadata(
   "Datenschutzerklärung",
-  "Informationen zur Verarbeitung personenbezogener Daten auf der Website von HNFix.",
+  "Datenschutzerklärung von HNFix mit Informationen zu Kontaktanfragen, Foto-Uploads, Hosting, E-Mail-Versand und Google Analytics.",
   "/datenschutz",
 );
 
 export default function DatenschutzPage() {
   return (
     <PageShell>
+      <JsonLd
+        data={[
+          createBreadcrumbJsonLd("Datenschutzerklärung", "/datenschutz"),
+          createWebPageJsonLd({
+            name: "Datenschutzerklärung von HNFix",
+            description:
+              "Informationen zur Verarbeitung personenbezogener Daten auf der Website von HNFix.",
+            path: "/datenschutz",
+          }),
+        ]}
+      />
       <section className="pageHero legalHero">
         <div className="container">
           <p className="sectionEyebrow">Datenschutz</p>
@@ -261,6 +277,10 @@ export default function DatenschutzPage() {
           </section>
 
           <p className="legalUpdated">Stand: August 2026</p>
+          <p>
+            Die gesetzlich vorgeschriebenen Anbieterinformationen finden Sie
+            im <Link href="/impressum">Impressum</Link>.
+          </p>
         </div>
       </section>
     </PageShell>

@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageShell } from "../components/page-shell";
+import {
+  createBreadcrumbJsonLd,
+  createWebPageJsonLd,
+  JsonLd,
+} from "../components/seo-content";
 import { createPageMetadata } from "../metadata";
 
 export const metadata: Metadata = createPageMetadata(
@@ -11,6 +17,17 @@ export const metadata: Metadata = createPageMetadata(
 export default function ImpressumPage() {
   return (
     <PageShell>
+      <JsonLd
+        data={[
+          createBreadcrumbJsonLd("Impressum", "/impressum"),
+          createWebPageJsonLd({
+            name: "Impressum von HNFix",
+            description:
+              "Anbieterinformationen von HNFix Haus & Objekt Service.",
+            path: "/impressum",
+          }),
+        ]}
+      />
       <section className="pageHero legalHero">
         <div className="container">
           <p className="sectionEyebrow">Rechtliche Informationen</p>
@@ -102,6 +119,10 @@ export default function ImpressumPage() {
           </section>
 
           <p className="legalUpdated">Stand: August 2026</p>
+          <p>
+            Weitere Informationen zur Verarbeitung personenbezogener Daten
+            finden Sie in der <Link href="/datenschutz">Datenschutzerklärung</Link>.
+          </p>
         </div>
       </section>
     </PageShell>

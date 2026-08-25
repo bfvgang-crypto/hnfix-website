@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AnalyticsConsent } from "./components/analytics-consent";
+import { JsonLd, serviceArea } from "./components/seo-content";
 import { SITE_URL } from "./metadata";
 import "./globals.css";
 
@@ -15,6 +16,14 @@ export const metadata: Metadata = {
   description:
     "HNFix bietet Reinigung, Entrümpelung, Keller- und Garagenservice, Sperrmüllbereitstellung und Gartenpflege in Heilbronn und Umgebung.",
   applicationName: "HNFix",
+  category: "Haus- und Objektservice",
+  keywords: [
+    "Hausservice Heilbronn",
+    "Gebäudereinigung Heilbronn",
+    "Entrümpelung Heilbronn",
+    "Objektpflege Heilbronn",
+    "Treppenhausreinigung Heilbronn",
+  ],
   robots: {
     index: true,
     follow: true,
@@ -45,10 +54,51 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "HNFix",
+      inLanguage: "de-DE",
+      publisher: { "@id": `${SITE_URL}/#localbusiness` },
+    },
+    {
+      "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+      "@id": `${SITE_URL}/#localbusiness`,
+      name: "HNFix Haus & Objekt Service",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+      image: `${SITE_URL}/hero.webp`,
+      description:
+        "Haus- und Objektservice für Reinigung, Entrümpelung und Objektpflege in Heilbronn und Umgebung.",
+      areaServed: serviceArea.map((name) => ({ "@type": "City", name })),
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Haus- und Objektservice",
+        itemListElement: [
+          "Gebäudereinigung",
+          "Treppenhausreinigung",
+          "Entrümpelung",
+          "Keller- und Garagenservice",
+          "Sperrmüllbereitstellung",
+          "Außenflächenpflege",
+        ].map((name) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name },
+        })),
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
       <body>
+        <JsonLd data={organizationJsonLd} />
         {children}
         <AnalyticsConsent gaId={gaMeasurementId} />
       </body>

@@ -627,6 +627,32 @@ a {
   padding: 1.5rem;
 }
 
+.pageServiceImage {
+  margin: 0 0 1.5rem;
+}
+
+.pageServiceImageFrame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  border: 1px solid rgba(97, 167, 255, 0.22);
+  border-radius: 14px;
+  background: rgba(3, 9, 25, 0.7);
+}
+
+.pageServiceImageFrame img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.pageServiceImage figcaption {
+  margin-top: 0.55rem;
+  color: #9fb3d4;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
 .checkList {
   list-style: none;
   padding: 0;
@@ -1450,6 +1476,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .pageServiceImageFrame {
+    aspect-ratio: 4 / 3;
+  }
+
   .processSection {
     padding: 2rem 0;
   }
